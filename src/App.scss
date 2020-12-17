@@ -1,22 +1,47 @@
-*{
-  font-size: 14px;
-  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+* {
+  font-size: 13px;
+  font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  color: #5f6368;
 }
-a{
+.visnone{
+  visibility: hidden;
+}
+a {
   text-decoration: none;
   // color:#5f6368;
-  color:black
+  color: black;
+}
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.circle:hover {
+  background-color: #f1f3f4;
+}
+input {
+  background-color: transparent;
+  border: 0;
+  outline: none;
 }
 #app {
-  height:100%;
+  overflow: hidden;
+  height: 100%;
   .app_header {
     height: 65px;
     border-bottom: 1px solid rgb(218, 220, 224);
     .app_logo {
-      background-color: #3399cc;
       width: 240px;
       height: 100%;
       float: left;
+      .app_logo_inner {
+        width: 136px;
+        height: 44px;
+        background-image: url("./assets/img/Noogle\ Drive.png");
+        margin: 11px 20px;
+      }
     }
     .search_bar {
       width: 722px;
@@ -26,54 +51,184 @@ a{
       margin-left: 18px;
       margin-top: 8px;
       border-radius: 5px;
+      .search_logo {
+        margin: 4px 10px;
+        background-image: url("./assets/img/search.png");
+        background-position: center;
+        float: left;
+      }
+      .search_logo:hover {
+        background-color: #e3e5e6;
+      }
+      .search_text {
+        width: calc(100% - 152px);
+        height: 48px;
+        font-size: 16px;
+      }
+      .search_dropdown {
+        float: right;
+        text-align: center;
+        margin-top: 4px;
+        margin-right: 10px;
+        cursor: pointer;
+        svg {
+          color: #5f6368;
+          margin-top: 8px;
+        }
+      }
+      .search_dropdown:hover {
+        background-color: #e3e5e6;
+      }
+    }
+    @media screen and (max-width: 1205px) {
+      .search_bar {
+        width: calc(100% - 500px) !important;
+      }
     }
     .right_bar {
       float: right;
       width: 222px;
       height: 100%;
-      background-color: #0099cc;
-    }
-  }
-  .app_body {
-    height: calc(100vh - 78px);
-    .left_bar {
-      width: 230px;
-      padding-top: 12px;
-      padding-left: 10px;
-      height: 100%;
-      float: left;
-      background-color: #003366;
-      .add_new {
-        width: 120px;
-        height: 48px;
-        border-radius: 24px;
-        background-color: white;
-        box-shadow: 0px 1px 5px 0px #AAAAAA;
-        border:1px solid #eceded;
-        margin-bottom: 10px;
-      }
-      .router{
-        .route{
-          height:40px;
-          line-height: 40px;
-          background-color: red;
+      .right_bar_inner {
+        margin-top: 10px;
+        overflow: hidden;
+        .circle {
+          float: left;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        .help_logo {
+          background-image: url("./assets/img/help_logo.png");
+          margin-right: 4px;
+        }
+        .settings_logo {
+          background-image: url("./assets/img/settings_logo.png");
+          margin-right: 33px;
+        }
+        .apps_logo {
+          background-image: url("./assets/img/app_logo.png");
+          margin-right: 8px;
+        }
+        .profile_photo {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background-image: url("./assets/img/profile.jpg");
+          background-position: center;
+          background-size: 100% 100%;
+          margin: 3px;
+          float: left;
+          cursor: pointer;
+        }
+        .profile_photo:hover {
+          margin: 0;
+          border: 3px solid #e4e6e7;
         }
       }
     }
-    .pageView{
+  }
+  .app_body {
+    height: calc(100vh - 60px);
+    .left_bar {
+      width: 240px;
+      padding-top: 12px;
+      height: 100%;
       float: left;
-      width: calc(100vw - 317px);
-      height:100%;
-      padding-top: 12px;
-      padding-left: 20px;
-      // background-color: red;
+      .add_new:hover {
+        background-color: #f8f9fa;
+        box-shadow: 0px 3px 7px 0px #aaa;
+      }
+      .add_new {
+        width: 118px;
+        height: 46px;
+        transition: all 0.4s;
+        margin-left: 10px;
+        border-radius: 24px;
+        background-color: white;
+        box-shadow: 0px 2px 3px 0px #aaaaaa;
+        border: 1px solid #eceded;
+        margin-bottom: 10px;
+        line-height: 45px;
+        cursor: pointer;
+        .new_logo {
+          width: 24px;
+          height: 24px;
+          background-image: url("./assets/img/new.png");
+          float: left;
+          margin: 12px 16px;
+        }
+        span {
+          margin-left: 4px;
+          font-size: 14px;
+          color: black;
+          float: left;
+        }
+      }
+      .router {
+        border-bottom: 1px solid #dadce0;
+      }
+      .space_preview {
+        width: 100%;
+        height: 140px;
+        background-color: #ccff99;
+        padding-top: 8px;
+        .space_chart {
+          width: 169px;
+          height: 75px;
+          background-color: #ffffcc;
+          margin-left: 61px;
+          .used_text {
+            margin-top: 14px;
+          }
+          .parallline {
+            width: 169px;
+            height: 4px;
+            background-color: #e0e0e0;
+            margin-top: 10px;
+            .used {
+              width: 20px;
+              height: 100%;
+              background-color: #4285f4;
+            }
+          }
+          .buy {
+            color: #1a73e8;
+            display: inline-block;
+            margin-top: 20px;
+          }
+        }
+      }
     }
-    .right_bar{
+    .pageView {
+      float: left;
+      width: calc(100vw - 335px);
+      // padding-right: 56px;
+      height: 100%;
+
+      padding-left: 20px;
+    }
+    .right_bar {
       width: 56px;
-      height:100%;
-      padding-top: 12px;
-      float: right;
+      height: calc(100% - 66px);
+      position: fixed;
+      top: 66px;
+      background-color: #fff;
+      right: 0;
       border-left: 1px solid rgb(218, 220, 224);
+      .tiny_apps {
+        width: 100%;
+        height: 185px;
+        background-color: #ccccff;
+      }
+      .add_app {
+        margin-top: 24px;
+        margin-left: 8px;
+      }
+      .hide_bar {
+        position: absolute;
+        bottom: 5px;
+        left: 8px;
+      }
     }
   }
 }

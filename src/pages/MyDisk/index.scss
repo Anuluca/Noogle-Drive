@@ -1,0 +1,16 @@
+#MyDisk{    
+    .tenkoseika{
+        color:#5F6368;
+        margin-left: 6px;
+        margin-top: 18px;
+        font-size: 14px;
+    }
+    .previewPhotos{
+        width: calc( 100% - 71px );
+        height: 191px;
+        background-color: #CCFFCC;
+        overflow:hidden;
+        display:flex;
+        flex-wrap: wrap;
+    }
+}

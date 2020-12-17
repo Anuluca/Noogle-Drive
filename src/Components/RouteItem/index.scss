@@ -1,0 +1,68 @@
+.RouteItem {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    .logo {
+        width: 22px;
+        height: 40px;
+        float: left;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-right: 23px;
+    }
+    .mydrive_logo {
+        background-image: url("../../assets/img/myDrive.png");
+    }
+    
+    .sharetome_logo {
+        background-image: url("../../assets/img/shareToMe.png");
+    }
+    
+    .usedrecently_logo {
+        background-image: url("../../assets/img/usedRecently.png");
+    }
+    
+    .starred_logo {
+        background-image: url("../../assets/img/starred.png");
+    }
+    
+    .recycle_logo {
+        background-image: url("../../assets/img/recycle.png");
+    }
+    
+    .arrow {
+        float: left;
+        margin-right: 2px;
+        margin-left: -4px;
+        height:10px;
+        svg {
+            fill: #5f6368;
+            padding-top: 10px;
+        }
+    }
+}
+.backChose{
+    cursor: default;
+    background-color: #e8f0fe;
+    *{
+        color:#1967d2;
+        font-weight: bold;
+    }
+    .mydrive_logo {
+        background-image: url("../../assets/img/myDrive_chose.png");
+    }
+    .sharetome_logo {
+        background-image: url("../../assets/img/shareToMe_chose.png");
+    }
+    .usedrecently_logo {
+        background-image: url("../../assets/img/usedRecently_chose.png");
+    }
+    .starred_logo {
+        background-image: url("../../assets/img/starred_chose.png");
+    }
+    .recycle_logo {
+        background-image: url("../../assets/img/recycle_chose.png");
+    }
+}

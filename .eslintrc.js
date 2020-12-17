@@ -25,6 +25,9 @@ module.exports = {
     "@typescript-eslint/camelcase": 0,
     "@typescript-eslint/no-inferrable-types": 0,
     "no-multi-spaces": 0,
-    "react/self-closing-comp":0
+    "react/self-closing-comp":0,
+    "no-useless-constructor":0,
+    "default-case":0,
+    "eqeqeq":0
   },
 };

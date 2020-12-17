@@ -1,0 +1,51 @@
+#FileList{
+    width: calc( 100% - 71px );
+    height: 547px;
+    background-color: #009966;
+    margin-top: 18px;
+    *{
+        color:#5F6368;
+    }
+    .file_header,#FileLi{
+        width: 100%;
+        height:40px;
+        border-bottom: 1px solid rgb(218, 220, 224);
+        display: flex;
+        > div {
+            line-height: 40px;
+        }
+        .name{
+            flex:976;
+            font-weight: bold;
+            position: relative;
+            > div{
+                width: 38px;
+                height: 38px;
+                border-radius: 19px;
+                background-color: #f1f3f4;
+                left: 30px;
+                top:1px;
+                position: absolute;
+            }
+        }
+        .li_name{
+            flex:976;
+            >div{
+                width: 20px;
+                height: 16px;
+                float: left;
+                background-color: #FFCC33;
+                margin: 16px 19px 0 19px;
+            }
+        }
+        .owner{
+            flex:215
+        }
+        .update_time{
+            flex:201
+        }
+        .size{
+            flex:134
+        }
+    }
+}
