@@ -50,7 +50,7 @@ input {
       float: left;
       margin-left: 18px;
       margin-top: 8px;
-      border-radius: 5px;
+      border-radius: 8px;
       .search_logo {
         margin: 4px 10px;
         background-image: url("./assets/img/search.png");
@@ -80,7 +80,7 @@ input {
         background-color: #e3e5e6;
       }
     }
-    @media screen and (max-width: 1205px) {
+    @media screen and (max-width: 1305px) {
       .search_bar {
         width: calc(100% - 500px) !important;
       }
@@ -128,7 +128,7 @@ input {
     }
   }
   .app_body {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 78px);
     .left_bar {
       width: 240px;
       padding-top: 12px;
@@ -170,12 +170,10 @@ input {
       .space_preview {
         width: 100%;
         height: 140px;
-        background-color: #ccff99;
         padding-top: 8px;
         .space_chart {
           width: 169px;
           height: 75px;
-          background-color: #ffffcc;
           margin-left: 61px;
           .used_text {
             margin-top: 14px;
@@ -201,7 +199,7 @@ input {
     }
     .pageView {
       float: left;
-      width: calc(100vw - 335px);
+      width: calc(100vw - 318px);
       // padding-right: 56px;
       height: 100%;
 
@@ -217,17 +215,44 @@ input {
       border-left: 1px solid rgb(218, 220, 224);
       .tiny_apps {
         width: 100%;
-        height: 185px;
-        background-color: #ccccff;
+        height: 175px;
+        >div{
+          margin-bottom: 16px;
+          margin-left: 8px;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        .calender{
+          margin-top: 6px;
+          background-image: url("./assets/img/calender.png");
+        }
+        .keep{
+          background-image: url("./assets/img/keep.png");
+        }
+        .tasks{
+          background-image: url("./assets/img/tasks.png");
+        }
+      }
+      .divide{
+        width: 20px;
+        height: 1px;
+        background-color: #dadce0;
+        margin: 0 auto;
       }
       .add_app {
         margin-top: 24px;
         margin-left: 8px;
+        background-image: url("./assets/img/add.png");
+        background-position: center;
+        background-repeat: no-repeat;
       }
       .hide_bar {
         position: absolute;
         bottom: 5px;
         left: 8px;
+        background-image: url("./assets/img/more.png");
+        background-position: center;
+        background-repeat: no-repeat;
       }
     }
   }

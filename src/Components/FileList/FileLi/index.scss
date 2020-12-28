@@ -1,6 +1,11 @@
 #FileLi {
     height: 47px;
     * {
-        line-height: 47px !important;
+        line-height: 45px !important;
+        color:#0000008A;
+        font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    }
+    .li_name{
+        color: #5F6368;
     }
 }

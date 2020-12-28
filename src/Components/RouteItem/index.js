@@ -102,6 +102,23 @@ class RouteItem extends React.Component {
           });
         }
         break;
+      case "StorageSpace":
+        this.setState({
+          title: "存储空间",
+          logoClasses: "storagespace_logo logo",
+        });
+        if (this.props.ifChosen == true) {
+          this.setState({
+            arrowClasses: "arrow",
+            backClasses: "RouteItem backChose",
+          });
+        } else {
+          this.setState({
+            arrowClasses: "arrow visnone",
+            backClasses: "RouteItem",
+          });
+        }
+        break;
     }
   }
 

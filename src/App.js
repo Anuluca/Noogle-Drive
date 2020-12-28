@@ -7,18 +7,19 @@ import UsedRecently from "./pages/UsedRecently/index.js";
 import Starred from "./pages/Starred/index.js";
 import Recycle from "./pages/Recycle/index.js";
 import RouteItem from "./Components/RouteItem/index.js";
+import StorageSpace from "./pages/StorageSpace/index.js";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 
 class App extends React.Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      ifChosen:''
-    }
+      ifChosen: "",
+    };
   }
 
-  handleClick(index){
-    console.log("我是index",index);
+  handleClick(index) {
+    console.log("我是index", index);
   }
 
   render() {
@@ -65,8 +66,8 @@ class App extends React.Component {
                 <span>新建</span>
               </div>
               <div className="router">
-                <Link to="/" onClick = {this.handleClick("MyDisk")}>
-                  <RouteItem routeName="MyDisk" ifChosen = "Chosen"></RouteItem>
+                <Link to="/" onClick={this.handleClick("MyDisk")}>
+                  <RouteItem routeName="MyDisk" ifChosen="Chosen"></RouteItem>
                 </Link>
                 <Link to="/ShareToMe">
                   <RouteItem routeName="ShareToMe"></RouteItem>
@@ -82,13 +83,20 @@ class App extends React.Component {
                 </Link>
               </div>
               <div className="space_preview">
-                <div className="route">存储空间</div>
+                <Link to="/StorageSpace">
+                  <RouteItem routeName="StorageSpace"></RouteItem>
+                </Link>
                 <div className="space_chart">
                   <div className="used_text">已使用 1.6 GB，共 15 GB</div>
                   <div className="parallline">
                     <div className="used"></div>
                   </div>
-                  <a href="www.google.com" className="buy">
+                  <a
+                    href="http://www.anuluca.icu"
+                    rel="noreferrer"
+                    target="_blank"
+                    className="buy"
+                  >
                     购买存储空间
                   </a>
                 </div>
@@ -100,9 +108,15 @@ class App extends React.Component {
               <Route path="/UsedRecently" component={UsedRecently}></Route>
               <Route path="/Starred" component={Starred}></Route>
               <Route path="/Recycle" component={Recycle}></Route>
+              <Route path="/StorageSpace" component={StorageSpace}></Route>
             </div>
             <div className="right_bar">
-              <div className="tiny_apps"></div>
+              <div className="tiny_apps">
+                <div className="calender circle"></div>
+                <div className="keep circle"></div>
+                <div className="tasks circle"></div>
+              </div>
+              <div className="divide"></div>
               <div className="add_app circle"></div>
               <div className="hide_bar circle"></div>
             </div>

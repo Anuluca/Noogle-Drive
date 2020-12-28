@@ -1,17 +1,17 @@
 #PageHeader{
     width: 100%;
     height: 47px;
-    background-color: #66CCFF;
     border-bottom: 1px solid #dadce0;
     .title_dropdown{
         width: auto;
-        border-radius: 5px;
-        background-color: #f1f3f4;
+        border-radius: 8px;
         display: inline-block;
         margin-left: 3px;
         padding:8px 6px;
         margin-top: 3px;
+        cursor: pointer;
         .title{
+            color: black;
             font-size: 18px;
             float: left;
         }
@@ -21,10 +21,25 @@
             float: left;
         }
     }
+    .title_dropdown:hover{
+        background-color: #f1f3f4;
+    }
     .right_buttons{
         float: right;
         width: 130px;
         height: 100%;
-        background-color: #FFCC99;
+        div{
+            float: left;
+            margin-left: 8px;
+            margin-top: 3px;
+            background-position: center;
+        }
+        .viewType{
+            margin-left: 26px;
+            background-image: url("../../assets/img/view.png");
+        }
+        .info{
+            background-image: url("../../assets/img/info.png");
+        }
     }
 }

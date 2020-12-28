@@ -37,6 +37,11 @@ class PageHeader extends React.Component {
           title: "回收站",
         });
         break;
+      case "StorageSpace":
+        this.setState({
+          title: "存储空间",
+        });
+        break;
     }
   }
 
@@ -45,9 +50,21 @@ class PageHeader extends React.Component {
       <div id="PageHeader">
         <div className="title_dropdown">
           <div className="title">{this.state.title}</div>
-          <svg class="polygon" width="20px" height="20px" viewBox="0 0 20 20" focusable="false" fill="#000000"><polygon points="5,8 10,13 15,8"></polygon></svg>
+          <svg
+            class="polygon"
+            width="20px"
+            height="20px"
+            viewBox="0 0 20 20"
+            focusable="false"
+            fill="#000000"
+          >
+            <polygon points="5,8 10,13 15,8"></polygon>
+          </svg>
         </div>
-        <div className = "right_buttons"></div>
+        <div className="right_buttons">
+          <div className="viewType circle"></div>
+          <div className="info circle"></div>
+        </div>
       </div>
     );
   }
